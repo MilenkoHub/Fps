@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Player/wepman.gd" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="CapsuleMesh" id=4]
+
+[node name="wepman" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 0.999562, 0.029579, 0, -0.029579, 0.999562, 0, -1.0862, 0.0321429 )
+script = ExtResource( 1 )
+
+[node name="Sweps" type="Spatial" parent="."]
+
+[node name="Pistol" type="Spatial" parent="Sweps"]
+
+[node name="Pistol" type="MeshInstance" parent="Sweps/Pistol"]
+transform = Transform( 0.0232738, 0, 0, 0, 0.0232738, 0, 0, 0, 0.059552, 0, 0.972208, -0.198783 )
+mesh = SubResource( 2 )
+
+[node name="Rifle" type="Spatial" parent="Sweps"]
+
+[node name="Rifle" type="MeshInstance" parent="Sweps/Rifle"]
+transform = Transform( 0.0144177, 0, 0, 0, 0.0144177, 0, 0, 0, 0.0780953, 0.047618, 1.02155, -0.172866 )
+mesh = SubResource( 3 )
+
+[node name="Unarmed" type="Spatial" parent="Sweps"]
+
+[node name="Unarmed" type="MeshInstance" parent="Sweps/Unarmed"]
+transform = Transform( 0.101108, 0, 0, 0, 0.101108, 0, 0, 0, 0.101108, 0, 0, 0 )
+mesh = SubResource( 4 )
